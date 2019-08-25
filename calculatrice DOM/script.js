@@ -8,6 +8,7 @@ const calc = document.querySelector(".calc")
 let operator = ""
 let op = false
 let somme = 0;
+let changeop = true
 
 reset.addEventListener('click', () => { result.innerHTML = 0; somme = 0; })
 revert.addEventListener('click', () => { result.innerHTML = result.innerHTML.slice(0, -1) })
@@ -25,12 +26,7 @@ number.map(el => el.addEventListener('click', () => {
 }))
 
 oper.map(el => el.addEventListener('click', () => {
-    if (operator === "plus") {
-        result.innerHTML = +result.innerHTML + +somme; operator = ""; op = true;
-    }
-    else if (operator === "mult") { result.innerHTML = +result.innerHTML * +somme; operator = ""; op = true; }
-    else if (operator === "minus") { result.innerHTML = +somme - +result.innerHTML; operator = ""; op = true; }
-    else if (operator === "div") { result.innerHTML = +somme / +result.innerHTML; operator = ""; op = true; }
+    if (!op) { call() }
     switch (el.innerHTML) {
         case "x": {
             somme = +result.innerHTML;
@@ -64,13 +60,12 @@ calc.addEventListener('click', () => {
 })
 
 const call = () => {
-    switch (operator) {
-        case "plus": { result.innerHTML = +result.innerHTML + +somme; operator = ""; return op = true; }
-        case "mult": { result.innerHTML = +result.innerHTML * +somme; operator = ""; return op = true; }
-        case "minus": { result.innerHTML = +somme - +result.innerHTML; operator = ""; return op = true; }
-        case "div": { result.innerHTML = +somme / +result.innerHTML; operator = ""; return op = true; }
-        default: return;
+    if (operator === "plus") {
+        result.innerHTML = +result.innerHTML + +somme; operator = ""; op = true;
     }
+    else if (operator === "mult") { result.innerHTML = +result.innerHTML * +somme; operator = ""; op = true; }
+    else if (operator === "minus") { result.innerHTML = +somme - +result.innerHTML; operator = ""; op = true; }
+    else if (operator === "div") { result.innerHTML = +somme / +result.innerHTML; operator = ""; op = true; }
 }
 
 

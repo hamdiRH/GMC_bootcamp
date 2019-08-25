@@ -25,6 +25,12 @@ number.map(el => el.addEventListener('click', () => {
 }))
 
 oper.map(el => el.addEventListener('click', () => {
+    if (operator === "plus") {
+        result.innerHTML = +result.innerHTML + +somme; operator = ""; op = true;
+    }
+    else if (operator === "mult") { result.innerHTML = +result.innerHTML * +somme; operator = ""; op = true; }
+    else if (operator === "minus") { result.innerHTML = +somme - +result.innerHTML; operator = ""; op = true; }
+    else if (operator === "div") { result.innerHTML = +somme / +result.innerHTML; operator = ""; op = true; }
     switch (el.innerHTML) {
         case "x": {
             somme = +result.innerHTML;
@@ -59,7 +65,7 @@ calc.addEventListener('click', () => {
 
 const call = () => {
     switch (operator) {
-        case "plus": { result.innerHTML = Number(result.innerHTML) + Number(somme); operator = ""; return op = true; }
+        case "plus": { result.innerHTML = +result.innerHTML + +somme; operator = ""; return op = true; }
         case "mult": { result.innerHTML = +result.innerHTML * +somme; operator = ""; return op = true; }
         case "minus": { result.innerHTML = +somme - +result.innerHTML; operator = ""; return op = true; }
         case "div": { result.innerHTML = +somme / +result.innerHTML; operator = ""; return op = true; }

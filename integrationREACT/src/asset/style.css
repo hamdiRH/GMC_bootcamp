@@ -1,0 +1,249 @@
+/* general style */
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+body{
+margin:3% 15% 0 15%
+}
+/* Navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 900
+    
+}
+
+.navbar ul{
+    list-style-type: none;
+    display: flex;
+    font-weight: 900;
+    font-size: 24px
+}
+.navbar ul li{
+    margin-left: 2rem
+}
+.navbar ul li:nth-of-type(2){
+    text-decoration: underline;
+    margin-bottom: 20px
+}
+
+/* Banner */
+.divbanner{
+    position: relative;
+}
+.bannertext{
+    position:absolute;
+    top:20%;
+    left:40%;
+    font-size: 120px;
+    color:white;
+    text-shadow: 2px 2px 5px red;
+
+}
+.bannertext2{
+    position:absolute;
+    top:38%;
+    left:31%;
+    font-size: 120px;
+    color:white;
+    text-shadow: 2px 2px 5px red;
+
+}
+.banner{
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+}
+
+/* article1 */
+.article1{
+    margin: 5rem 0;
+    display: flex;
+    justify-content: space-between;
+
+}
+.article1 div h1{
+    font-size: 60px;
+    width: 70%;
+    font-weight: 600
+}
+.article1 div p{
+    font-size: 20px;
+    width: 80%;
+    font-weight: 100;
+    letter-spacing: 1.2px;
+    line-height: 1.5em;
+}
+.article1 .readmore{
+    letter-spacing: 1px;
+    font-weight: 800;
+    line-height: 5em;
+}
+
+.imgarticle1 {
+width: 700px;
+}
+
+
+/* article2 */
+.article2{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+ 
+}
+.bloc1{
+    position: absolute;
+    top:10%;
+    z-index: -1;
+    width: 80%;
+    height: 200px;
+    background-color: rgba(61, 60, 60,0.08);
+
+}
+.bloc2{
+    position: absolute;
+    top:50%;
+    left:0;
+    z-index: -1;
+    width: 40%;
+    height: 280px;
+    background-color: rgba(61, 60, 60,0.08);
+    transform: rotate(60deg)
+
+}
+.article2-1{
+    width: 50%;
+    
+    
+}
+.article2-2{
+    width: 50%;
+    
+
+}
+.imgarticle2{
+    width: 500px
+
+}
+.imgarticle21{
+    width: 100%
+}
+.article2-title{
+    text-align: right !important;
+    font-weight: 900;
+    font-size: 40px
+}
+.article2-title span{
+    font-size: 55px
+}
+.article2-para{
+    font-size: 20px;
+   
+    color: grey;
+    letter-spacing: 2px;
+}
+.article2-2 p:nth-child(3){
+    font-size: 20px;
+    font-family: 'Anton', sans-serif;
+}
+.article2-tit{
+    
+font-family: 'Anton', sans-serif;
+    font-size: 70px;
+    width: 50%;
+    margin-top: 20%;
+    letter-spacing: 15px;
+}
+
+/* Newsletter */
+.newsletter{
+    position: relative;
+}
+.newsletter h1{
+    position: absolute;
+    top:30%;
+    left:15%;
+    font-size: 70px;
+    color:white;
+    text-shadow: 2px 2px 5px red;
+}
+/* Information */
+.Information{
+    margin-top: 100px
+}
+.Information span{
+   font-weight: 900;
+   font-size: 22px;
+   margin: 0 20px
+}
+.infopara{
+  margin-top: 50px;
+    font-size: 19px;
+    color: rgb(61, 60, 60);
+    width: 70%;
+    line-height: 2em;
+}
+
+/* category */
+.category{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+.category h1{
+    position: absolute;
+    font-size: 80px;
+    color:white;
+    top:25%;
+    text-shadow: 2px 2px 5px black;
+}
+.category h1:nth-child(1){left:10%}
+.category h1:nth-child(3){left:77%}
+.category .img{
+    width:30%
+}
+
+/* article4 */
+.article4{
+    margin-top: 100px;
+    display: flex;
+    position: relative;
+}
+.article4para{
+    font-size: 20px;
+color: rgb(61, 60, 60);
+letter-spacing: 2px;
+margin-left:15%
+}
+.article4bloc{
+    position: absolute;
+    top:10%;
+    z-index: -1;
+    width: 90%;
+    height: 70%;
+    background-color: rgba(61, 60, 60,0.1);
+}
+.read{
+    font-weight: 800;
+}
+
+/* footer */
+.footer{
+    margin-top: 100px
+}
+.footer span{
+   font-weight: 900;
+   font-size: 22px;
+   margin:0 20px
+}
+.footerpara{
+    font-size: 19px;
+    color: rgb(61, 60, 60);
+    line-height: 1.5em;
+   
+}
+.socialmedia img{
+margin:30px
+}

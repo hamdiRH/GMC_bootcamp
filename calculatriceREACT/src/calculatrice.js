@@ -24,21 +24,25 @@ const Calculatrice = () => {
         setSomme(0)
     }
     const div = () => {
+        !oper && cal()
         setSomme(+result)
         setOperator("div")
         setOper(true)
     }
     const mult = () => {
+        !oper && cal()
         setSomme(+result)
         setOperator("mult")
         setOper(true)
     }
     const minus = () => {
+        !oper && cal()
         setSomme(+result)
         setOperator("minus")
         setOper(true)
     }
     const plus = () => {
+        !oper && cal()
         setSomme(+result)
         setOperator("plus")
         setOper(true)
